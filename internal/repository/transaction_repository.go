@@ -20,4 +20,7 @@ type TransactionRepository interface {
 
 	// -> Apenas atualiza o status da transaçao
 	UpdateStatus(ctx context.Context, id string, status domain.TransactionStatus) error
+
+	// ListAll retorna todas as transações (com paginação futura)
+	ListAll(ctx context.Context) ([]*domain.Transaction, error)
 }
