@@ -23,8 +23,7 @@ type Transaction struct {
 	Status         TransactionStatus  `json: "status" bson:"status"`
 	CustomerEmail  string             `json: "customer_email" bson "customer-_email"` //bson:"customer_email" → MongoDB armazena com mesmo nome
 	Description    string             `json: "description" bson: "description"`
-	WebhookURL     string             `json: "webhook_url,omitempty" bson: "webhook_url.omitempty"`     //omitempty = se vazio, não aparece no JSON nem no MongoDB.
-	CardLastFour   string             `json:"card_last_four,omitempty" bson:"card_last_four,omitempty"` //omitempty = se vazio, não aparece no JSON nem no MongoDB.
+	WebhookURL     string             `json: "webhook_url,omitempty" bson: "webhook_url.omitempty"` //omitempty = se vazio, não aparece no JSON nem no MongoDB.
 	CreatedAt      time.Time          `json:"created_at" bson:"created_at"`
 	UpdatedAt      time.Time          `json:"updated_at" bson:"updated_at"`
 }
